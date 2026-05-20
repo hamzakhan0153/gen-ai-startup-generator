@@ -98,7 +98,7 @@ html, body, [class*="css"]{
 </style>
 """, unsafe_allow_html=True)
 
-# ── HERO ────────────────────────────────────
+# HERO
 st.markdown("""
 <div class='hero'>
 <div style='font-size:14px;color:#4F8EF7'>
@@ -115,7 +115,7 @@ Describe your idea and generate a complete startup blueprint powered by AI in se
 </div>
 """, unsafe_allow_html=True)
 
-# ── BUTTON ──────────────────────────────────
+#  BUTTON 
 c1,c2,c3=st.columns(3)
 
 with c2:
@@ -124,7 +124,7 @@ with c2:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# ── FEATURES ────────────────────────────────
+#  FEATURES
 c1,c2,c3=st.columns(3)
 
 with c1:
@@ -160,7 +160,7 @@ with c3:
     </div>
     """, unsafe_allow_html=True)
 
-# ── FOOTER ──────────────────────────────────
+#  FOOTER 
 st.markdown("""
 <div class='footer'>
 Built by Muhammad Hamza • National Incubation Center

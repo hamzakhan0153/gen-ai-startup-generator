@@ -5,37 +5,27 @@ import os
 
 load_dotenv()
 
-# ─────────────────────────────────────────────
-# PAGE CONFIG
-# ─────────────────────────────────────────────
+# PAGE 
 st.set_page_config(
     page_title="Startup Generator · NIC",
     page_icon="🚀",
     layout="wide"
 )
 
-# ─────────────────────────────────────────────
-# GROQ API KEY (use secrets in production)
-# ─────────────────────────────────────────────
+
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-# ─────────────────────────────────────────────
 # HEADER
-# ─────────────────────────────────────────────
 st.title("🚀 Startup Idea Generator")
 
 st.markdown("Generate complete startup plans using AI")
 
 st.markdown("---")
 
-# ─────────────────────────────────────────────
 # LAYOUT
-# ─────────────────────────────────────────────
 left_col, right_col = st.columns([1, 1.3])
 
-# ─────────────────────────────────────────────
 # INPUT SECTION
-# ─────────────────────────────────────────────
 with left_col:
 
     st.subheader("Your Inputs")
@@ -68,9 +58,7 @@ with left_col:
     generate = st.button("🚀 Generate Startup Plan")
 
 
-# ─────────────────────────────────────────────
-# RIGHT OUTPUT PANEL
-# ─────────────────────────────────────────────
+# OUTPUT 
 with right_col:
 
     st.subheader("Startup Plan")
@@ -112,7 +100,7 @@ Return output in markdown with:
                 response = client.chat.completions.create(
                     model="llama-3.3-70b-versatile",
                     messages=[{"role": "user", "content": prompt}],
-                    temperature=0.7
+                    temperature=0.5
                 )
 
                 result = response.choices[0].message.content
