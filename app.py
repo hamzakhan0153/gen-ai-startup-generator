@@ -120,7 +120,7 @@ c1,c2,c3=st.columns(3)
 
 with c2:
     if st.button("🚀 Generate Startup Plan"):
-       st.switch_page("pages/startup_generator.py")
+       st.switch_page("pages/StartUp_Generator.py")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
